@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <View
+            android:id="@+id/viewButtonLed"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/holo_green_dark"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvButtonLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUTTON"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UDP STATUS"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:id="@+id/viewUdpLed"  android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutButton"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <com.project.silberpfeil.DashboardGauge
+            android:id="@+id/gaugeRpm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+
+        <com.project.silberpfeil.DashboardGauge
+            android:id="@+id/gaugeTemp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</RelativeLayout>
