@@ -40,6 +40,16 @@
         android:layout_alignParentEnd="true">
 
         <TextView
+            android:id="@+id/textPacketLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0% Loss (0/50)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-monospace"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UDP STATUS"
@@ -48,7 +58,8 @@
             android:layout_marginEnd="8dp"/>
 
         <View
-            android:id="@+id/viewUdpLed"  android:layout_width="16dp"
+            android:id="@+id/viewUdpLed"
+            android:layout_width="16dp"
             android:layout_height="16dp"
             android:background="@android:color/holo_red_dark"/>
     </LinearLayout>
